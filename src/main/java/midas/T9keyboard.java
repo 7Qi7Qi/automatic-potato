@@ -28,7 +28,7 @@ public class T9keyboard {
       if (ret == null) {
         System.out.println("Input argument is illegal");
       }else {
-        System.out.println(ret);
+        System.out.println(stmt+"  ----->  "+ret);
       }
       stmt = sc.nextLine().toLowerCase();
     }
