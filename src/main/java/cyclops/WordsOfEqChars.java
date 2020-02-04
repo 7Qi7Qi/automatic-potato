@@ -1,23 +1,30 @@
 package cyclops;
-import java.lang.reflect.Array;
-import java.util.*;
-import java.io.*;
-import java.net.*;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class WordsOfEqChars {
   final static String URL_STR = "http://wiki.puzzlers.org/pub/wordlists/unixdict.txt";
+
   public static void main(String[] args) throws IOException {
     System.out.println("Java 1.5");
-    Long start = System.currentTimeMillis();
-    Long end = start;
+    long start = System.currentTimeMillis();
     onePointFiveSolution();
-    end = System.currentTimeMillis();
+    long end = System.currentTimeMillis();
     System.out.println("Runtime  "+((end-start)/1000f)+"s");
     System.out.println("-------------------------------------------------");
     System.out.println("Java 1.8");
-    onePointEightSolution();
+    Anagrams.main();
     start = System.currentTimeMillis();
     System.out.print("Runtime   "+((start-end)/1000f)+"s");
+
   }
 
   public static void onePointFiveSolution() throws IOException {
@@ -43,9 +50,5 @@ public class WordsOfEqChars {
         System.out.println(ans);
       }
     }
-  }
-
-  public static void onePointEightSolution(){
-
   }
 }
