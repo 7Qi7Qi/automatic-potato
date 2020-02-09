@@ -23,6 +23,7 @@ public class RenameFile {
     if (rename(oldFolderPath, newFolderPath))    System.out.println(SUCCESS+" Folder.");
     else System.out.println(FAILURE+" Folder.");
   }
+
   private static boolean rename(String s1, String s2){
     return new File(s1).renameTo(new File(s2));
   }
